@@ -113,7 +113,7 @@ export default function Home() {
     return (
     <>
 {/* NAVBAR */}
-<header className="w-full flex items-center justify-between px-16 py-6 border-b bg-white sticky top-0 z-50">
+<header className="w-full flex items-center justify-between px-4 sm:px-8 lg:px-16 py-4 sm:py-6 border-b bg-white sticky top-0 z-50">
   
   {/* LEFT – Logo */}
   <div className="flex items-center gap-3">
@@ -126,7 +126,7 @@ export default function Home() {
   </div>
 
   {/* CENTER – Navigation */}
- <nav className="flex gap-10 text-gray-700">
+ <nav className="hidden md:flex gap-6 lg:gap-10 text-gray-700">
   <a href="#home" className={active === "home" ? "text-black font-semibold border-b-2 border-black" : "hover:text-black transition"}>
     Home
   </a>
@@ -183,11 +183,11 @@ export default function Home() {
 
     {/* Contact Button */}
     <a
-      href="#contact"
-      className="px-6 py-2 border rounded-lg hover:bg-black hover:text-white transition duration-300 text-black font-bold"
-    >
-      Contact me
-    </a>
+  href="#contact"
+  className="hidden sm:inline-flex px-4 sm:px-6 py-2 border rounded-lg hover:bg-black hover:text-white transition duration-300 text-black font-bold"
+>
+  Contact me
+</a>
 
   </div>
 </header>
@@ -195,51 +195,54 @@ export default function Home() {
       {/* HOME SECTION */}
 <main
   id="home"
-  className="relative min-h-screen bg-[#EDEDED] text-black flex flex-col pt-20 px-12"
+  className="relative min-h-screen bg-[#EDEDED] text-black flex flex-col pt-24 px-4 sm:px-8 lg:px-12"
 >
   
   {/* TOP CONTENT */}
-  <div className="relative flex items-start">
-    {/* LEFT SIDE */}
-    <div className="w-1/2 flex flex-col justify-center">
-      <Image
-        src="/images/profile.jpg"
-        alt="Ahmad"
-        width={200}
-        height={180}
-        className="rounded-full mb-10"
-      />
+<div className="relative flex flex-col lg:flex-row items-center lg:items-start gap-10">
 
-      <h1 className="text-5xl font-bold mb-6">Ahmad Al Ahdab</h1>
+  {/* LEFT SIDE */}
+  <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
+    <Image
+      src="/images/profile.jpg"
+      alt="Ahmad"
+      width={200}
+      height={200}
+      className="rounded-full mb-8"
+    />
 
-      <p className="text-lg text-gray-600 max-w-md">
-        Computer Science Student passionate about Software Engineering,
-        Cybersecurity and Intelligent Systems.
-      </p>
+    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+      Ahmad Al Ahdab
+    </h1>
+
+    <p className="text-base sm:text-lg text-gray-600 max-w-md">
+      Computer Science Student passionate about Software Engineering,
+      Cybersecurity and Intelligent Systems.
+    </p>
+  </div>
+
+  {/* CENTER ANIMATED TEXT (nicht mehr absolute auf Mobile) */}
+  <div className="w-full lg:absolute lg:left-1/2 lg:-top-12 lg:-translate-x-1/2 text-center z-20 order-first lg:order-none">
+    <p className="text-sm sm:text-lg tracking-widest text-black/60 mb-2">
+      Welcome to my
+    </p>
+
+    <div className="relative inline-block leading-none select-none">
+      <span className="portfolio-outline text-4xl sm:text-6xl font-extrabold">
+        PORTFOLIO
+      </span>
+
+      <span className="portfolio-fill text-4xl sm:text-6xl font-extrabold absolute left-0 top-0">
+        PORTFOLIO
+      </span>
     </div>
+  </div>
 
-     {/* CENTER ANIMATED TEXT */}
- <div className="absolute left-1/2 -top-12 -translate-x-1/2 text-center z-20">
-  <p className="text-lg tracking-widest text-black/60 mb-2">
-    Welcome to my
-  </p>
-
-  <div className="relative inline-block leading-none select-none">
-    <span className="portfolio-outline text-6xl font-extrabold">
-      PORTFOLIO
-    </span>
-
-    <span className="portfolio-fill text-6xl font-extrabold absolute left-0 top-0">
-      PORTFOLIO
-    </span>
+  {/* RIGHT SIDE */}
+  <div className="w-full lg:w-1/2">
+    <HeroFloating />
   </div>
 </div>
-
-    {/* RIGHT SIDE */}
-    <div className="w-1/2">
-      <HeroFloating />
-    </div>
-  </div>
 
   {/* BOTTOM MOVING LOGOS */}
   <div className="mt-auto pb-10">
@@ -250,9 +253,9 @@ export default function Home() {
             <Image
               src={skill.icon}
               alt={skill.name}
-              width={90}
-              height={90}
-              className="object-contain opacity-70 hover:opacity-100 transition"
+              width={70}
+              height={70}
+              className="object-contain opacity-70 hover:opacity-100 transition w-12 h-12 sm:w-16 sm:h-16 lg:w-[90px] lg:h-[90px]"
             />
           </div>
         ))}
@@ -263,10 +266,8 @@ export default function Home() {
 
       {/* ABOUT SECTION */}
 {/* ABOUT SECTION */}
-<section
-  id="about"
-  className="min-h-screen bg-white flex items-center px-16 py-24"
->
+<section id="about" className="min-h-screen bg-white flex items-center px-4 sm:px-8 lg:px-16 py-16 sm:py-24">
+
   <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
     {/* LEFT – Image */}
@@ -282,7 +283,7 @@ export default function Home() {
 
     {/* RIGHT – Text */}
     <div>
-      <h2 className="text-6xl font-extrabold text-black mb-10">
+      <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black mb-8 sm:mb-10">
         About Me
       </h2>
 
@@ -309,11 +310,11 @@ export default function Home() {
 </section>
 
 {/* EDUCATION + EXPERIENCE (LIGHT) */}
-<section id="education" className="min-h-screen bg-[#EDEDED] text-black px-12 py-24">
+<section id="education" className="min-h-screen bg-[#EDEDED] text-black px-4 sm:px-8 lg:px-12 py-16 sm:py-24">
   <div className="max-w-7xl mx-auto">
     {/* Title */}
-    <h2 className="text-6xl font-extrabold mb-16">
-      Education & <span className="text-Black">Experience</span>
+    <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black mb-8 sm:mb-10">
+      Education & <span className="text-black">Experience</span>
     </h2>
 
     <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -363,7 +364,7 @@ export default function Home() {
 
       {/* EXPERIENCE */}
       <div>
-        <h3 className="text-3xl font-bold mb-8">Experience</h3>
+        <h3 className="text-2xl sm:text-3xl font-bold mb-8">Experience</h3>
 
         <div className="space-y-6">
           <div className="edu-card bg-white rounded-2xl p-6 shadow-sm border border-black/10 transition-all duration-300">
@@ -431,12 +432,13 @@ export default function Home() {
 </section>
 
       {/* PROJECTS SECTION */}
-<section id="projects" className="scroll-mt-28 bg-white px-12 py-24">
+  <section id="projects" className="scroll-mt-28 bg-white px-4 sm:px-8 lg:px-12 py-16 sm:py-24">
+
   <div className="max-w-7xl mx-auto">
     {/* Header */}
-    <div className="flex items-start justify-between gap-6 mb-12">
+    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6 mb-12">
       <div>
-        <h2 className="text-5xl font-extrabold text-black">My Projects</h2>
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-black">My Projects</h2>
       </div>
 
       {/* Optional GitHub Profile Button */}
@@ -508,11 +510,11 @@ export default function Home() {
   </div>
 </section>
 
-      <section id="contact" className="min-h-screen bg-[#EDEDED] px-6 md:px-12 py-24">
+      <section id="contact" className="min-h-screen bg-[#EDEDED] px-4 sm:px-8 lg:px-12 py-16 sm:py-24">
   <div className="max-w-5xl mx-auto">
     {/* Header */}
     <div className="text-center mb-14">
-      <h2 className="text-5xl font-extrabold text-black">Contact me</h2>
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-black"> Contact me</h2>
       <p className="text-gray-600 mt-4 text-lg">
         Write me a message and I will get back to you as soon as possible.
       </p>
@@ -581,15 +583,15 @@ export default function Home() {
         </div>
 
         {/* Submit */}
-        <div className="md:col-span-2 flex items-center justify-between gap-4">
+        <div className="md:col-span-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <p className="text-sm text-gray-500">
             By sending this form you agree to be contacted back.
           </p>
 
           <button
             type="submit"
-            className="px-7 py-3 rounded-xl bg-white text-black font-semibold border-2 border-black hover:bg-black hover:text-white  hover:scale-105 transition-all duration-300"
-          >
+            className="w-full sm:w-auto px-7 py-3 rounded-xl bg-white text-black font-semibold border-2 border-black hover:bg-black hover:text-white hover:scale-105 transition-all duration-300"
+            >
             Send message
           </button>
         </div>
