@@ -94,7 +94,7 @@ export default function Home() {
     },
     {
       title: "Faraway Game",
-      image: "/images/Faraway.png",
+      image: "/images/faraway.png",
       description:
         "Developed in a team using Kotlin with a clear OOP-based architecture. I was responsible for the frontend implementation and UI logic, contributing to a clean structure, maintainability, and a smooth user experience.",
       github: "https://github.com/Ahdab99/Faraway-Game",

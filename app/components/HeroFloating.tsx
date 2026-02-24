@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const items = [
   { src: "/images/car.png", size: 240, top: "15%", left: "25%" },
   { src: "/images/web.png", size: 230, top: "5%", left: "65%" },
-  { src: "/images/Faraway.png", size: 220, top: "55%", left: "60%" },
+  { src: "/images/faraway.png", size: 220, top: "55%", left: "60%" },
   { src: "/images/code.jpg", size: 220, top: "60%", left: "20%" },
 ];
 
