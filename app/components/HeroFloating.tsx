@@ -4,10 +4,10 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const items = [
-  { src: "/hero/car.png", size: 240, top: "15%", left: "25%" },
-  { src: "/hero/web.png", size: 230, top: "5%", left: "65%" },
-  { src: "/hero/Faraway.png", size: 220, top: "55%", left: "60%" },
-  { src: "/hero/code.jpg", size: 220, top: "60%", left: "20%" },
+  { src: "/images/car.png", size: 240, top: "15%", left: "25%" },
+  { src: "/images/web.png", size: 230, top: "5%", left: "65%" },
+  { src: "/images/Faraway.png", size: 220, top: "55%", left: "60%" },
+  { src: "/images/code.jpg", size: 220, top: "60%", left: "20%" },
 ];
 
 export default function HeroFloating() {

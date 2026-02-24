@@ -4,14 +4,14 @@ import React, { useEffect, useState } from "react";
 import HeroFloating from "./components/HeroFloating";
 
 const skills = [
-  { name: "C++", icon: "/skills/cplusplus.jpg" },
-  { name: "CSS", icon: "/skills/css.jpg" },
-  { name: "HTML", icon: "/skills/html.jpg" },
-  { name: "Java", icon: "/skills/javaa.jpg" },
-  { name: "JavaScript", icon: "/skills/js.jpg" },
-  { name: "Kotlin", icon: "/skills/kotlin.jpg" },
-  { name: "ROS2", icon: "/skills/ros2.jpg" },
-  { name: "SQL", icon: "/skills/sql.jpg" },
+  { name: "C++", icon: "/images/cplusplus.jpg" },
+  { name: "CSS", icon: "/images/css.jpg" },
+  { name: "HTML", icon: "/images/html.jpg" },
+  { name: "Java", icon: "/images/javaa.jpg" },
+  { name: "JavaScript", icon: "/images/js.jpg" },
+  { name: "Kotlin", icon: "/images/kotlin.jpg" },
+  { name: "ROS2", icon: "/images/ros2.jpg" },
+  { name: "SQL", icon: "/images/sql.jpg" },
 ];
 
 // --- Icons (SVG) ---
@@ -83,7 +83,7 @@ export default function Home() {
   const projects = [
     {
       title: "Autonomous Navigation Project (AuNa)",
-      image: "/car.png",
+      image: "/images/car.png",
       description:
         "A robotics software project developed using ROS2, Docker, and Ansible. The system implements wall-following and autonomous driving algorithms for racing scenarios, including configurable parameters, RViz simulation support, and a modular architecture for scalable robot control and deployment.",
       github: "https://github.com/Ahdab99/Autonomous-Navigation-Project-AuNa-",
@@ -94,7 +94,7 @@ export default function Home() {
     },
     {
       title: "Faraway Game",
-      image: "/Faraway.png",
+      image: "/images/faraway.png",
       description:
         "Developed in a team using Kotlin with a clear OOP-based architecture. I was responsible for the frontend implementation and UI logic, contributing to a clean structure, maintainability, and a smooth user experience.",
       github: "https://github.com/Ahdab99/Faraway-Game",
@@ -102,7 +102,7 @@ export default function Home() {
     },
     {
       title: "Staircase Card Game",
-      image: "/stair.png",
+      image: "/images/stair.png",
       description:
         "A complete card game implemented in Kotlin. Focused on clean, maintainable code, clear game logic, and structured design following object-oriented principles.",
       github: "https://github.com/Ahdab99/Staircase-Card-Game",
@@ -203,7 +203,7 @@ export default function Home() {
     {/* LEFT SIDE */}
     <div className="w-1/2 flex flex-col justify-center">
       <Image
-        src="/profile.jpg"
+        src="/images/profile.jpg"
         alt="Ahmad"
         width={200}
         height={180}
@@ -272,7 +272,7 @@ export default function Home() {
     {/* LEFT – Image */}
     <div className="flex justify-center md:justify-start">
       <Image
-        src="/Ahmad.png" 
+        src="/images/Ahmad.png" 
         alt="About Ahmad"
         width={500}
         height={500}
